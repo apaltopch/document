@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>629</width>
+    <height>397</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Электронные документы</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget_add_user">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>611</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_reception">
+     <attribute name="title">
+      <string>Прием дел</string>
+     </attribute>
+     <layout class="QVBoxLayout" name="verticalLayout_1">
+      <item>
+       <widget class="QLabel" name="labelReception">
+        <property name="text">
+         <string>Список дел</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox_podpis">
+        <property name="text">
+         <string>Подписи есть</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox_opis">
+        <property name="text">
+         <string>Опись есть</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox_file">
+        <property name="text">
+         <string>Файл приложен</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableReception"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnCheckCompleteness">
+        <property name="text">
+         <string>Проверить комплектность</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelResultReception">
+        <property name="text">
+         <string>Результат:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tab_signatures">
+     <attribute name="title">
+      <string>Проверка подписей</string>
+     </attribute>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QListWidget" name="listSignatures"/>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="textSignatureDetail"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnRefreshSignatures">
+        <property name="text">
+         <string>Обновить список</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tab_history">
+     <attribute name="title">
+      <string>История взаимодействий</string>
+     </attribute>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QComboBox" name="comboDepartments"/>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableHistory"/>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="textHistory"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tab_files">
+     <attribute name="title">
+      <string>Файлы к заявкам</string>
+     </attribute>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QComboBox" name="comboRequests"/>
+      </item>
+      <item>
+       <widget class="QListWidget" name="listFiles"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnAddFile">
+        <property name="text">
+         <string>Добавить файл</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnRemoveFile">
+        <property name="text">
+         <string>Удалить выбранный</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tab_reproducibility">
+     <attribute name="title">
+      <string>Воспроизводимость</string>
+     </attribute>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="QPushButton" name="btnLoadDoc">
+        <property name="text">
+         <string>Загрузить документ</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="textReproducibilityResult"/>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tab_response">
+     <attribute name="title">
+      <string>Ответные сообщения</string>
+     </attribute>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <widget class="QListWidget" name="listResponses"/>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioApprove">
+        <property name="text">
+         <string>Подтвердить</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="radioReject">
+        <property name="text">
+         <string>Отказать</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="textResponseComment"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnSendResponse">
+        <property name="text">
+         <string>Отправить ответ</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Пользователи</string>
+     </attribute>
+     <widget class="QTableWidget" name="tableWidget_add_user">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>581</width>
+        <height>231</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>270</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Добавить</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
